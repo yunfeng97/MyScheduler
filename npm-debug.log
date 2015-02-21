@@ -1,0 +1,114 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '-g' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.36
+4 verbose node symlink /usr/bin/node
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /home/yunfeng/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/home/yunfeng/.npm/scheduler/0.0.0/package.tgz', '.' ]
+11 verbose tarball /home/yunfeng/.npm/scheduler/0.0.0/package.tgz
+12 verbose folder .
+13 info prepublish scheduler@0.0.0
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /home/yunfeng/.npm/1f1177db-tar.lock
+16 silly lockFile 13a19704--npm-scheduler-0-0-0-package-tgz tar:///home/yunfeng/.npm/scheduler/0.0.0/package.tgz
+17 verbose lock tar:///home/yunfeng/.npm/scheduler/0.0.0/package.tgz /home/yunfeng/.npm/13a19704--npm-scheduler-0-0-0-package-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 13a19704--npm-scheduler-0-0-0-package-tgz tar:///home/yunfeng/.npm/scheduler/0.0.0/package.tgz
+21 silly lockFile 13a19704--npm-scheduler-0-0-0-package-tgz tar:///home/yunfeng/.npm/scheduler/0.0.0/package.tgz
+22 silly lockFile 21f3b5f7-feng-npm-scheduler-0-0-0-package /home/yunfeng/.npm/scheduler/0.0.0/package
+23 verbose lock /home/yunfeng/.npm/scheduler/0.0.0/package /home/yunfeng/.npm/21f3b5f7-feng-npm-scheduler-0-0-0-package.lock
+24 silly lockFile 21f3b5f7-feng-npm-scheduler-0-0-0-package /home/yunfeng/.npm/scheduler/0.0.0/package
+25 silly lockFile 21f3b5f7-feng-npm-scheduler-0-0-0-package /home/yunfeng/.npm/scheduler/0.0.0/package
+26 silly lockFile 3a52ce78- .
+27 silly lockFile 3a52ce78- .
+28 silly resolved [ { name: 'scheduler',
+28 silly resolved     private: true,
+28 silly resolved     version: '0.0.0',
+28 silly resolved     description: 'a Sails application',
+28 silly resolved     keywords: [],
+28 silly resolved     dependencies:
+28 silly resolved      { ejs: '~0.8.4',
+28 silly resolved        grunt: '0.4.2',
+28 silly resolved        'grunt-contrib-clean': '~0.5.0',
+28 silly resolved        'grunt-contrib-coffee': '~0.10.1',
+28 silly resolved        'grunt-contrib-concat': '~0.3.0',
+28 silly resolved        'grunt-contrib-copy': '~0.5.0',
+28 silly resolved        'grunt-contrib-cssmin': '~0.9.0',
+28 silly resolved        'grunt-contrib-jst': '~0.6.0',
+28 silly resolved        'grunt-contrib-less': '0.11.1',
+28 silly resolved        'grunt-contrib-uglify': '~0.4.0',
+28 silly resolved        'grunt-contrib-watch': '~0.5.3',
+28 silly resolved        'grunt-sails-linker': '~0.9.5',
+28 silly resolved        'grunt-sync': '~0.0.4',
+28 silly resolved        'include-all': '~0.1.3',
+28 silly resolved        rc: '~0.5.0',
+28 silly resolved        sails: '~0.10.5',
+28 silly resolved        'sails-disk': '~0.10.0',
+28 silly resolved        'sails-mongo': '^0.10.5' },
+28 silly resolved     scripts: { start: 'node app.js', debug: 'node debug app.js' },
+28 silly resolved     main: 'app.js',
+28 silly resolved     repository: { type: 'git', url: 'git://github.com/ubuntu/scheduler.git' },
+28 silly resolved     author: { name: 'ubuntu' },
+28 silly resolved     license: '',
+28 silly resolved     gitHead: '1714862462ee8ec643b242310057764a25ec015c',
+28 silly resolved     readme: '# scheduler\n\na [Sails](http://sailsjs.org) application\n',
+28 silly resolved     readmeFilename: 'README.md',
+28 silly resolved     bugs: { url: 'https://github.com/ubuntu/scheduler/issues' },
+28 silly resolved     homepage: 'https://github.com/ubuntu/scheduler',
+28 silly resolved     _id: 'scheduler@0.0.0',
+28 silly resolved     _shasum: '9b12e685dced228f1eb14de9e729e9bbb4ef2a82',
+28 silly resolved     _from: '.' } ]
+29 info install scheduler@0.0.0 into /usr/lib
+30 info installOne scheduler@0.0.0
+31 verbose lib/node_modules/scheduler unbuild
+32 verbose tar unpack /home/yunfeng/.npm/scheduler/0.0.0/package.tgz
+33 silly lockFile 12e0a6da-r-usr-lib-node-modules-scheduler tar:///usr/lib/node_modules/scheduler
+34 verbose lock tar:///usr/lib/node_modules/scheduler /home/yunfeng/.npm/12e0a6da-r-usr-lib-node-modules-scheduler.lock
+35 silly lockFile 13a19704--npm-scheduler-0-0-0-package-tgz tar:///home/yunfeng/.npm/scheduler/0.0.0/package.tgz
+36 verbose lock tar:///home/yunfeng/.npm/scheduler/0.0.0/package.tgz /home/yunfeng/.npm/13a19704--npm-scheduler-0-0-0-package-tgz.lock
+37 silly gunzTarPerm modes [ '775', '664' ]
+38 error Error: EACCES, mkdir '/usr/lib/node_modules/scheduler'
+38 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/scheduler']
+38 error   errno: 3,
+38 error   code: 'EACCES',
+38 error   path: '/usr/lib/node_modules/scheduler',
+38 error   fstream_type: 'Directory',
+38 error   fstream_path: '/usr/lib/node_modules/scheduler',
+38 error   fstream_class: 'DirWriter',
+38 error   fstream_stack:
+38 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+38 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+38 error      'Object.oncomplete (fs.js:108:15)' ] }
+39 error Please try running this command again as root/Administrator.
+40 error System Linux 3.13.0-45-generic
+41 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g"
+42 error cwd /home/yunfeng/sails/scheduler
+43 error node -v v0.10.36
+44 error npm -v 1.4.28
+45 error path /usr/lib/node_modules/scheduler
+46 error fstream_path /usr/lib/node_modules/scheduler
+47 error fstream_type Directory
+48 error fstream_class DirWriter
+49 error code EACCES
+50 error errno 3
+51 error stack Error: EACCES, mkdir '/usr/lib/node_modules/scheduler'
+52 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+52 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+52 error fstream_stack Object.oncomplete (fs.js:108:15)
+53 verbose exit [ 3, true ]
