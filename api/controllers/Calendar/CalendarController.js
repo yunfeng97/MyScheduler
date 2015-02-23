@@ -29,6 +29,30 @@ module.exports = {
             todo: 'delete Not implemented yet!'
         });
     },
+    
+    searchByMonth: function(req, res){
+        var month = req.param('month');
+        
+        Calendar.findByMonth(month, function(err, results){
+            if (err){
+                res.send(500, err);
+            }else{
+                res.json(results);
+            }
+        });
+    },
+    
+    searchByWeek: function(req, res){
+        var week = req.param('week');
+        
+        Calendar.findByWeek(week, function(err, results){
+            if (err){
+                res.send(500, err);
+            }else{
+                res.json(results);
+            }
+        });
+    },
 
     createTemplate: function (req, res) {
         /*

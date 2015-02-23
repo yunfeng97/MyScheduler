@@ -18,8 +18,10 @@ module.exports = {
         ownerId:    'string',
         date:       'datetime',
         year:       'integer',
+        month:      'integer',
         week:       'integer',
         day:        'integer',
+        weekOfMonth: 'integer', 
         dayOfWeek:  'integer',
         events:     'json'
 
