@@ -22,106 +22,86 @@
 
 module.exports.routes = {
 
-  /***************************************************************************
-  *                                                                          *
-  * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
-  * etc. depending on your default view engine) your home page.              *
-  *                                                                          *
-  * (Alternatively, remove this and add an `index.html` file in your         *
-  * `assets` directory)                                                      *
-  *                                                                          *
-  ***************************************************************************/
+    /***************************************************************************
+     *                                                                          *
+     * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
+     * etc. depending on your default view engine) your home page.              *
+     *                                                                          *
+     * (Alternatively, remove this and add an `index.html` file in your         *
+     * `assets` directory)                                                      *
+     *                                                                          *
+     ***************************************************************************/
 
-  '/' : {
-    controller : 'home'
-  },
+    '/': {
+        controller: 'home'
+    },
 
-  '/login' : {
-    controller : 'Login/auth',
-    action     : 'index'
-  },
+    '/login': {
+        controller: 'Login/auth',
+        action: 'index'
+    },
 
-  '/logout' : {
-    controller : 'Login/auth',
-    action     : 'logout'
-  },
-
-
-  /*** Routes for User ***/
-  'POST /user' : {
-    controller : 'Login/SignupController',
-    action:       'createNew'
-  },
-
-  /*** Routes for Dashboard ***/
-  'GET /:teacherId' : 'Dashboard/DashboardController',
+    '/logout': {
+        controller: 'Login/auth',
+        action: 'logout'
+    },
 
 
-  /*** Routes for Calendar ***/
-  'GET /:teacherId/calendar': {
-    controller: 'Calendar/CalendarController',
-    action: 'show'
-  },
-  'POST /calendar/:teacherId': {
-    controller: 'Calendar/CalendarController',
-    action: 'create'
-  },
-  'PUT /calendar/:teacherId': {
-    controller: 'Calendar/CalendarController',
-    action: 'update'
-  },
-  'DELETE /calendar/:teacherId': {
-    controller: 'Calendar/CalendarController',
-    action: 'delete'
-  },
+    /*** Routes for User ***/
+    'POST /user': {
+        controller: 'Login/SignupController',
+        action: 'createNew'
+    },
+
+    /*** Routes for Dashboard ***/
+    'GET /:userId': 'Dashboard/DashboardController',
 
 
-  /*** Routes for Students ***/
-  'GET /:teacherId/students' : 'Student/StudentController',
-  'GET /:teacherId/student/:studentId' : {
-    controller: 'Student/StudentController',
-    action: 'show'
-  },
-  'POST /:teacherId/student' : {
-    controller: 'Student/StudentController',
-    action: 'create'
-  },
-  'POST /:teacherId/students' : {
-    controller: 'Student/StudentController',
-    action: 'import'
-  },
-  'PUT /:teacherId/student/:studentId' : {
-    controller: 'Student/StudentController',
-    action: 'update'
-  },
-  'DELETE /:teacherId/student/:studentId' : {
-    controller: 'Student/StudentController',
-    action: 'delete'
-  },
-  'GET /:teacherId/:studentId' : {
-    controller: 'Student/StudentController',
-    action: 'studentDashboard'
-  }
+    /*** Routes for Calendar ***/
+    'GET /:userId/calendar': {
+        controller: 'Calendar/CalendarController',
+        action: 'show'
+    },
+    'POST /calendar/:userId': {
+        controller: 'Calendar/CalendarController',
+        action: 'create'
+    },
+    'POST /calendar/:userId/template': {
+        controller: 'Calendar/CalendarController',
+        action: 'createTemplate'
+    },
+    'PUT /calendar/:userId': {
+        controller: 'Calendar/CalendarController',
+        action: 'update'
+    },
+    'DELETE /calendar/:userId': {
+        controller: 'Calendar/CalendarController',
+        action: 'delete'
+    },
+
+    /*** Routes for Service ***/
+    'POST /:serviceName/' : {
+
+    }
+
+    /*
+     'get /signup': { view: 'conversion/signup' },
+     'post /signup': 'AuthController.processSignup',
+     'get /login': { view: 'portal/login' },
+     'post /login': 'AuthController.processLogin',
+     '/logout': 'AuthController.logout',
+     'get /me': 'UserController.profile'
+     */
 
 
-/*
-  'get /signup': { view: 'conversion/signup' },
-  'post /signup': 'AuthController.processSignup',
-  'get /login': { view: 'portal/login' },
-  'post /login': 'AuthController.processLogin',
-  '/logout': 'AuthController.logout',
-  'get /me': 'UserController.profile'
-*/
-
-
-  /***************************************************************************
-  *                                                                          *
-  * Custom routes here...                                                    *
-  *                                                                          *
-  *  If a request to a URL doesn't match any of the custom routes above, it  *
-  * is matched against Sails route blueprints. See `config/blueprints.js`    *
-  * for configuration options and examples.                                  *
-  *                                                                          *
-  ***************************************************************************/
+    /***************************************************************************
+     *                                                                          *
+     * Custom routes here...                                                    *
+     *                                                                          *
+     *  If a request to a URL doesn't match any of the custom routes above, it  *
+     * is matched against Sails route blueprints. See `config/blueprints.js`    *
+     * for configuration options and examples.                                  *
+     *                                                                          *
+     ***************************************************************************/
 
 };

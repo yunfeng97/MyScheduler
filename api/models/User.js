@@ -20,14 +20,13 @@ module.exports = {
       unique: true
     },
     */
-    publicId:   'string', // this ID should be given to students so they can register with this teacher
-
-    password:  'string',
-
     email:     {
       type:    'email',
       unique:  true
     },
+    password:  'string',
+    serviceName:   'string', // this service name should be given to clients so they can register with this service provider
+
     firstName: 'string',
     lastName:  'string',
 
@@ -36,7 +35,7 @@ module.exports = {
       defaultsTo: false
     },
 
-    userType:   'string' ,   // the type of the user. For example, business provider or customer
+    userType:   'string' ,   // the type of the user. For example, business provider, customer or both
 
     /**
      * Strips the password out of the json

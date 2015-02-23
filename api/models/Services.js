@@ -1,33 +1,41 @@
 /**
-* Services.js
-*
-* @description :: Service model. Describe the service.
-* @docs        :: http://sailsjs.org/#!documentation/models
-*/
+ * Services.js
+ *
+ * @description :: Service model. Describe the service.
+ * @docs        :: http://sailsjs.org/#!documentation/models
+ */
 
 module.exports = {
 
-  attributes: {
-    uuid:       {
-      type:       'string',
-      primaryKey: true,
-      required:   true
-    },
-    ownerId:   {
-      type:   'string',
-      unique: true
-    },
+    attributes: {
+        /*
+         uuid:       {
+         type:       'string',
+         primaryKey: true,
+         required:   true
+         },
+         */
+        key:            'string',
+        ownerId: {
+            type: 'string',
+            unique: true
+        },
 
-    serviceName:  'string',
-    serviceDesc:  'string',
-    category:     'string',
-    isSole:       'boolean',
+        serviceName: {
+            type: 'string',
+            unique: true
+        },
+        serviceDesc:        'string',
+        category:           'string',
+        isSole:             'boolean',
 
-    //optional fields
-    address:      'string',
-    city:         'string',
-    country:      'string',
-    postalCode:   'string'
-  }
+        //optional fields
+        contactPerson:      'string',
+        telephone:          'string',
+        address:            'string',
+        city:               'string',
+        country:            'string',
+        postalCode:         'string'
+    }
 };
 
