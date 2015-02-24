@@ -80,9 +80,31 @@ module.exports.routes = {
     },
 
     /*** Routes for Service ***/
-    'POST /:serviceName/' : {
-
+    'POST /service/register' : {
+        controller: 'Service/ServiceController',
+        action:     'createNew'
+    },
+    'PUT /service/:serviceName': {
+        controller: 'Service/ServiceController',
+        action:     'update'
+    },
+    'GET /service': {
+        controller: 'Service/SearchController',
+        action:     'searchByMultiConditions'
+    },
+    'GET /service/category/:categoryId': {
+        controller: 'Service/SearchController',
+        action:     'searchByCategory'
+    },
+    'GET /service/name/:serviceName': {
+        controller: 'Service/SearchController',
+        action:     'searchByServiceName'
+    },
+    'GET /service/desc/:description': {
+        controller: 'Service/SearchController',
+        action:     'searchByDescription'
     }
+    
 
     /*
      'get /signup': { view: 'conversion/signup' },
