@@ -57,27 +57,37 @@ module.exports.routes = {
     'GET /:userId': 'Dashboard/DashboardController',
 
 
-    /*** Routes for Calendar ***/
-    'GET /:userId/calendar': {
+
+    /*** Routes for Business Calendar ***/
+    'GET /:businessName/calendar': {
         controller: 'Calendar/CalendarController',
-        action: 'show'
+        action: 'showBusinessCalendar'
     },
-    'POST /calendar/:userId': {
-        controller: 'Calendar/CalendarController',
+   
+    
+    
+    /*** Routes for Customer Calendar ***/
+    'GET /:userId/calendar': {
+        controller: 'Calendar/CustomerCalendarController',
+        action: 'showCustomerCalendar'
+    },
+     'POST /calendar/:userId': {
+        controller: 'Calendar/CustomerCalendarController',
         action: 'create'
     },
     'POST /calendar/:userId/template': {
-        controller: 'Calendar/CalendarController',
+        controller: 'Calendar/CustomerCalendarController',
         action: 'createTemplate'
     },
     'PUT /calendar/:userId': {
-        controller: 'Calendar/CalendarController',
+        controller: 'Calendar/CustomerCalendarController',
         action: 'update'
     },
     'DELETE /calendar/:userId': {
-        controller: 'Calendar/CalendarController',
+        controller: 'Calendar/CustomerCalendarController',
         action: 'delete'
     },
+    
 
     /*** Routes for Service ***/
     'POST /service/register' : {
@@ -87,6 +97,10 @@ module.exports.routes = {
     'PUT /service/:serviceName': {
         controller: 'Service/ServiceController',
         action:     'update'
+    },
+    'GET /service/:serviceName': {
+        controller: 'Service/SearchController',
+        action:     'searchByServiceName'
     },
     'GET /service': {
         controller: 'Service/SearchController',
@@ -103,6 +117,10 @@ module.exports.routes = {
     'GET /service/desc/:description': {
         controller: 'Service/SearchController',
         action:     'searchByDescription'
+    },
+    'GET /service/location/:location': {
+        controller: 'Service/SearchController',
+        action:     'searchByLocation'
     }
     
 
