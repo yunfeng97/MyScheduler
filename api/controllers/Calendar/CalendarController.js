@@ -18,13 +18,17 @@ module.exports = {
         });
     },
 
-    update: function (req, res) {
+    updateCalendar: function (req, res) {
+        var userId = req.session('userId');
+        Calendar.update({}, function (err, result) {
+
+        })
         return res.json({
             todo: 'update Not implemented yet!'
         });
     },
 
-    delete: function (req, res) {
+    deleteCalendar: function (req, res) {
         return res.json({
             todo: 'delete Not implemented yet!'
         });
