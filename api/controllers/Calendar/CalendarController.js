@@ -20,7 +20,15 @@ module.exports = {
 
     updateCalendar: function (req, res) {
         var userId = req.session('userId');
-        Calendar.update({}, function (err, result) {
+        var calendarId = req.param('calendarId');
+        var year = req.param('year');
+        var week = req.param('week');
+        var day = 'event' + req.param('day');
+        
+        var newEvent = req.param('event');
+        var updateQuery = {};
+        updateQuery[day] = newEvent;
+        Calendar.update({id: calendarId}, updateQuery, function (err, result) {
 
         })
         return res.json({

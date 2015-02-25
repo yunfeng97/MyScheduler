@@ -14,7 +14,14 @@ module.exports = {
       serviceName:      'string',
       serviceDesc:      'string',
       openOnHoliday:    'boolean',
-      businessHours:    'array'
+      //businessHours:    'array'
+      mon:              'json',
+      tue:              'json',
+      wed:              'json',
+      thu:              'json',
+      fri:              'json',
+      sat:              'json',
+      sun:              'json'
       /*
       [
       {//Monday

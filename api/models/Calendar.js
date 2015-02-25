@@ -23,7 +23,14 @@ module.exports = {
         //day:        'integer',
         weekOfMonth: 'integer', 
         dayOfWeek:  'integer',
-        events:     'json'
+        //events:     'array'
+        event1:     'json',
+        event2:     'json',
+        event3:     'json',
+        event4:     'json',
+        event5:     'json',
+        event6:     'json',
+        event7:     'json'
 
         /*
          [
