@@ -20,7 +20,7 @@ module.exports = {
         year:       'integer',
         month:      'integer',
         week:       'integer',
-        day:        'integer',
+        //day:        'integer',
         weekOfMonth: 'integer', 
         dayOfWeek:  'integer',
         events:     'json'
