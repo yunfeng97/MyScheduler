@@ -5,6 +5,25 @@
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
 
+/*
+ ownerId:    'string',
+ date:       'datetime',
+ year:       'integer',
+ month:      'integer',
+ week:       'integer',
+ //day:        'integer',
+ weekOfMonth: 'integer',
+ dayOfWeek:  'integer',
+ //events:     'array'
+ event1:     'json',
+ event2:     'json',
+ event3:     'json',
+ event4:     'json',
+ event5:     'json',
+ event6:     'json',
+ event7:     'json'
+ */
+
 module.exports = {
     show: function (req, res) {
         return res.json({
@@ -18,6 +37,13 @@ module.exports = {
         });
     },
 
+    createBlankCalendar: function(req, res){
+        var blankCalendar = {};
+
+        blankCalendar.ownerId = req.session('userId');
+
+    },
+
     updateCalendar: function (req, res) {
         var userId = req.session('userId');
         var calendarId = req.param('calendarId');
@@ -28,7 +54,7 @@ module.exports = {
         var newEvent = req.param('event');
         var updateQuery = {};
         updateQuery[day] = newEvent;
-        Calendar.update({id: calendarId}, updateQuery, function (err, result) {
+        Calendar.update({id: calendarId}, updateQuery, function (err, result){
 
         })
         return res.json({
