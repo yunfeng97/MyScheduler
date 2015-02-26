@@ -37,10 +37,19 @@ module.exports = {
         });
     },
 
-    createBlankCalendar: function(req, res){
+    // create a blank calendar for one week. Should be called by batch job 6 months before the actual month
+    // or online if the blank calendar doesn't exist.
+    createBlankCalendar: function(req, callback){
+        /*
         var blankCalendar = {};
 
         blankCalendar.ownerId = req.session('userId');
+        blankCalendar.year = req.param('year');
+        blankCalendar.month = req.param('month');
+        blankCalendar.week = req.param('week');
+        */
+
+        Calendar.create(req.param('blankTemplate'), callback(err, result));
 
     },
 
