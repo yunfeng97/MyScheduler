@@ -23,23 +23,14 @@ module.exports = {
       sat:              'json',
       sun:              'json'
       /*
-      [
-      {//Monday
-        closed:         'boolean',
-        startTime:      'datetime',
-        endTime:        'datetime',
-        breakTimeFrom:  'datetime',
-        breakTimeTo:    'datetime'
-      },
-
-      {//Tuesday
+     
+      {
         closed:         'boolean',
         startTime:      'datetime',
         endTime:        'datetime',
         breakTimeFrom:  'datetime',
         breakTimeTo:    'datetime'
       }
-      ]
        */
   }
 };

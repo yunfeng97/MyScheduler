@@ -115,6 +115,23 @@ module.exports = {
             breakTime:  '12'
         };
         */
+        
+        /*
+        CalendarTemplate model
+        ownerId:          'string',
+      serviceId:        'string',
+      serviceName:      'string',
+      serviceDesc:      'string',
+      openOnHoliday:    'boolean',
+      //businessHours:    'array'
+      mon:              'json',
+      tue:              'json',
+      wed:              'json',
+      thu:              'json',
+      fri:              'json',
+      sat:              'json',
+      sun:              'json'
+        */
         var template = {
             ownerId:        req.session.userId,
             serviceId:      req.session.serviceId,
