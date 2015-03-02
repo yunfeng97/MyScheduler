@@ -61,10 +61,17 @@ module.exports.routes = {
     /*** Routes for Business Calendar ***/
     'GET /:businessName/calendar': {
         controller: 'Calendar/CalendarController',
-        action: 'showBusinessCalendar'
+        action: 'showCalendar'
+    },
+    'GET /:businessName/template': {
+        controller: 'Calendar/CalendarController',
+        action: 'showCalendarTemplate'
+    },
+    'POST /:businessName/template': {
+        controller: 'Calendar/CalendarController',
+        action: 'createTemplate'
     },
    
-    
     
     /*** Routes for Customer Calendar ***/
     'GET /:userId/calendar': {
@@ -74,10 +81,6 @@ module.exports.routes = {
      'POST /calendar/:userId': {
         controller: 'Calendar/CustomerCalendarController',
         action: 'create'
-    },
-    'POST /calendar/:userId/template': {
-        controller: 'Calendar/CustomerCalendarController',
-        action: 'createTemplate'
     },
     'PUT /calendar/:userId': {
         controller: 'Calendar/CustomerCalendarController',
