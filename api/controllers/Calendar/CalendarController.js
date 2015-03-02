@@ -22,6 +22,16 @@
  event5:     'json',
  event6:     'json',
  event7:     'json'
+
+ {
+ customerId:         'integer',
+ startTime:  'datetime',
+ endTime:    'datetime',
+ repeatable: 'boolean',
+ visible:    'boolean',
+ occupied:   'boolean',
+ status:     'string',
+ }
  */
 
 module.exports = {

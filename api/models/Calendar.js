@@ -46,7 +46,6 @@ module.exports = {
         event20:     'json'
 
         /*
-         [
          {
          customerId:         'integer',
          startTime:  'datetime',
@@ -57,7 +56,6 @@ module.exports = {
          status:     'string',
 
          }
-         ]
          */
     }
 };
