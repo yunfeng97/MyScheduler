@@ -39,6 +39,7 @@ module.exports = {
 
     // create a blank calendar for one week. Should be called by batch job 6 months before the actual month
     // or online if the blank calendar doesn't exist.
+
     createBlankCalendar: function(req, callback){
         /*
         var blankCalendar = {};
@@ -50,20 +51,20 @@ module.exports = {
         */
 
         Calendar.create(req.param('blankTemplate'), callback(err, result));
-
     },
 
     updateCalendar: function (req, res) {
         var userId = req.session('userId');
-        var calendarId = req.param('calendarId');
+        /*
         var year = req.param('year');
         var week = req.param('week');
-        var day = 'event' + req.param('day');
-        
+        */
+        var day = req.param('day');
         var newEvent = req.param('event');
         var updateQuery = {};
+        updateQuery[id] = req.param('calendarId');
         updateQuery[day] = newEvent;
-        Calendar.update({id: calendarId}, updateQuery, function (err, result){
+        Calendar.update(updateQuery, function (err, result){
 
         })
         return res.json({
@@ -101,43 +102,47 @@ module.exports = {
         });
     },
 
+    getTemplate:    function(req, res){
+        CalendarTemplate.find({serviceId: req.session.serviceId}, function(err, result){
+            if (err){
+                res.send(500, err);
+            }else{
+                res.json(result);
+            }
+        })
+    },
+
     createTemplate: function (req, res) {
-        /*
-        var bh = [];
-        bh[0] = {
-            startTime:  '9',
-            endTime:    '20',
-            breakTime:  '11'
-        };
-        bh[1] = {
-            startTime:  '9',
-            endTime:    '20',
-            breakTime:  '12'
-        };
-        */
-        
         /*
         CalendarTemplate model
         ownerId:          'string',
-      serviceId:        'string',
-      serviceName:      'string',
-      serviceDesc:      'string',
-      openOnHoliday:    'boolean',
-      //businessHours:    'array'
-      mon:              'json',
-      tue:              'json',
-      wed:              'json',
-      thu:              'json',
-      fri:              'json',
-      sat:              'json',
-      sun:              'json'
+        serviceId:        'string',
+        serviceName:      'string',
+        serviceDesc:      'string',
+        openOnHoliday:    'boolean',
+        //businessHours:    'array'
+        mon:              'json',
+        tue:              'json',
+        wed:              'json',
+        thu:              'json',
+        fri:              'json',
+        sat:              'json',
+        sun:              'json'
         */
         var template = {
             ownerId:        req.session.userId,
             serviceId:      req.session.serviceId,
-            businessHours:  req.businessHours
+            serviceName:    req.param('serviceName'),
+            serviceDesc:    req.param('serviceDesc'),
+            openOnHoliday:  req.param('openOnHoliday'),
+            mon:            req.param('mon'),
+            tue:            req.param('tue'),
+            wed:            req.param('wed'),
+            thu:            req.param('thu'),
+            fri:            req.param('fri'),
+            sat:            req.param('sat'),
+            sun:            req.param('sun')
         };
-
 
         CalendarTemplate.create(template, function (err, newTemplate) {
             if (err){

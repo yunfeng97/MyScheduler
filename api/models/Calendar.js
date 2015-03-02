@@ -30,18 +30,32 @@ module.exports = {
         event4:     'json',
         event5:     'json',
         event6:     'json',
-        event7:     'json'
+        event7:     'json',
+        event8:     'json',
+        event9:     'json',
+        event10:    'json',
+        event11:     'json',
+        event12:     'json',
+        event13:     'json',
+        event14:     'json',
+        event15:     'json',
+        event16:     'json',
+        event17:     'json',
+        event18:     'json',
+        event19:     'json',
+        event20:     'json'
 
         /*
          [
          {
-         id:         'integer',
+         customerId:         'integer',
          startTime:  'datetime',
          endTime:    'datetime',
          repeatable: 'boolean',
          visible:    'boolean',
          occupied:   'boolean',
-         status:     'string'
+         status:     'string',
+
          }
          ]
          */
