@@ -59,18 +59,35 @@ module.exports.routes = {
 
 
     /*** Routes for Business Calendar ***/
-    'GET /:businessName/calendar': {
+    'GET /calendar/:userId': {
         controller: 'Calendar/CalendarController',
         action: 'showCalendar'
     },
-    'GET /:businessName/template': {
+    'POST /calendar/:userId': {
+        controller: 'Calendar/CalendarController',
+        action: 'create'
+    },
+    'PUT /calendar/:userId': {
+        controller: 'Calendar/CalendarController',
+        action: 'update'
+    },
+    'GET /calendar/template/:userId': {
         controller: 'Calendar/CalendarController',
         action: 'showCalendarTemplate'
     },
-    'POST /:businessName/template': {
+    'POST /calendar/template/:userId': {
         controller: 'Calendar/CalendarController',
         action: 'createTemplate'
     },
+    'PUT /calendar/template/:userId': {
+        controller: 'Calendar/CalendarController',
+        action: 'updateTemplate'
+    },
+    'DELETE /calendar/template/:userId': {
+        controller: 'Calendar/CalendarController',
+        action: 'deleteTemplate'
+    },
+
    
     
     /*** Routes for Customer Calendar ***/
@@ -78,14 +95,7 @@ module.exports.routes = {
         controller: 'Calendar/CustomerCalendarController',
         action: 'showCustomerCalendar'
     },
-     'POST /calendar/:userId': {
-        controller: 'Calendar/CustomerCalendarController',
-        action: 'create'
-    },
-    'PUT /calendar/:userId': {
-        controller: 'Calendar/CustomerCalendarController',
-        action: 'update'
-    },
+
     'DELETE /calendar/:userId': {
         controller: 'Calendar/CustomerCalendarController',
         action: 'delete'
