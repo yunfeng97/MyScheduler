@@ -35,7 +35,17 @@
  */
 
 module.exports = {
-    show: function (req, res) {
+    showCalendar: function (req, res) {
+        var currentUserId = req.session('userId');
+        var calendarUserId = req.param('userId');
+
+        // check own calendar
+        if (currentUserId == calendarUserId){
+
+        }else{ // check service provider calendar
+
+        }
+
         return res.json({
             todo: 'show Not implemented yet!'
         });
@@ -75,8 +85,12 @@ module.exports = {
         updateQuery[id] = req.param('calendarId');
         updateQuery[day] = newEvent;
         Calendar.update(updateQuery, function (err, result){
+            if (err){
 
-        })
+            }else{
+
+            }
+        });
         return res.json({
             todo: 'update Not implemented yet!'
         });

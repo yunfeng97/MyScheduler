@@ -57,6 +57,24 @@ module.exports = {
 
          }
          */
+    },
+
+    searchByOwner:  function(ownerId, weeks){
+        Calendar.find({ownerId: ownerId, week: weeks}, function(err, results){
+
+            if (err){
+
+            }else{
+                for (result in results){
+
+                }
+            }
+        })
+
+    },
+
+    searchByCustomer:   function(customerId){
+
     }
 };
 

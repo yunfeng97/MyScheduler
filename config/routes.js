@@ -54,11 +54,11 @@ module.exports.routes = {
     },
 
     /*** Routes for Dashboard ***/
-    'GET /:userId': 'Dashboard/DashboardController',
+    'GET /dashboard/:userId': 'Dashboard/DashboardController',
 
 
 
-    /*** Routes for Business Calendar ***/
+    /*** Routes for Calendar ***/
     'GET /calendar/:userId': {
         controller: 'Calendar/CalendarController',
         action: 'showCalendar'
@@ -88,30 +88,16 @@ module.exports.routes = {
         action: 'deleteTemplate'
     },
 
-   
-    
-    /*** Routes for Customer Calendar ***/
-    'GET /:userId/calendar': {
-        controller: 'Calendar/CustomerCalendarController',
-        action: 'showCustomerCalendar'
-    },
-
-    'DELETE /calendar/:userId': {
-        controller: 'Calendar/CustomerCalendarController',
-        action: 'delete'
-    },
-    
-
     /*** Routes for Service ***/
     'POST /service/register' : {
         controller: 'Service/ServiceController',
         action:     'createNew'
     },
-    'PUT /service/:serviceName': {
+    'PUT /service/:serviceId': {
         controller: 'Service/ServiceController',
         action:     'update'
     },
-    'GET /service/:serviceName': {
+    'GET /service/:serviceId': {
         controller: 'Service/SearchController',
         action:     'searchByServiceName'
     },
@@ -123,7 +109,7 @@ module.exports.routes = {
         controller: 'Service/SearchController',
         action:     'searchByCategory'
     },
-    'GET /service/name/:serviceName': {
+    'GET /service/name/:serviceId': {
         controller: 'Service/SearchController',
         action:     'searchByServiceName'
     },
@@ -136,6 +122,20 @@ module.exports.routes = {
         action:     'searchByLocation'
     }
     
+    /** Routes below are not used any more **/
+
+    /*** Routes for Customer Calendar ***/
+    /*
+    'GET /:userId/calendar': {
+        controller: 'Calendar/CustomerCalendarController',
+        action: 'showCustomerCalendar'
+    },
+
+    'DELETE /calendar/:userId': {
+        controller: 'Calendar/CustomerCalendarController',
+        action: 'delete'
+    }
+    */
 
     /*
      'get /signup': { view: 'conversion/signup' },
