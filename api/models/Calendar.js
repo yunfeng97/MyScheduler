@@ -61,7 +61,7 @@ module.exports = {
          */
     },
 
-    searchByOwnerAndWeek:  function(ownerId, week){
+    searchByOwnerAndWeek:  function(ownerId, week, callback){
         Calendar.find({ownerId: ownerId, week: week}, function(err, results){
 
             if (err){
@@ -82,68 +82,8 @@ module.exports = {
                         }
                     };
                     */
-                    if (!result.event1.visible || result.event1.occupied){
-                        result.event1 = null;
-                    }
-                    if (!result.event2.visible || result.event2.occupied){
-                        result.event2 = null;
-                    }
-                    if (!result.event3.visible || result.event3.occupied){
-                        result.event3 = null;
-                    }
-                    if (!result.event4.visible || result.event4.occupied){
-                        result.event4 = null;
-                    }
-                    if (!result.event5.visible || result.event5.occupied){
-                        result.event5 = null;
-                    }
-                    if (!result.event6.visible || result.event6.occupied){
-                        result.event6 = null;
-                    }
-                    if (!result.event7.visible || result.event7.occupied){
-                        result.event7 = null;
-                    }
-                    if (!result.event8.visible || result.event8.occupied){
-                        result.event8 = null;
-                    }
-                    if (!result.event9.visible || result.event9.occupied){
-                        result.event9 = null;
-                    }
-                    if (!result.event10.visible || result.event10.occupied){
-                        result.event10 = null;
-                    }
-                    if (!result.event11.visible || result.event11.occupied){
-                        result.event11 = null;
-                    }
-                    if (!result.event12.visible || result.event12.occupied){
-                        result.event12 = null;
-                    }
-                    if (!result.event13.visible || result.event13.occupied){
-                        result.event13 = null;
-                    }
-                    if (!result.event14.visible || result.event14.occupied){
-                        result.event14 = null;
-                    }
-                    if (!result.event15.visible || result.event15.occupied){
-                        result.event15 = null;
-                    }
-                    if (!result.event16.visible || result.event16.occupied){
-                        result.event16 = null;
-                    }
-                    if (!result.event17.visible || result.event17.occupied){
-                        result.event17 = null;
-                    }
-                    if (!result.event18.visible || result.event18.occupied){
-                        result.event18 = null;
-                    }
-                    if (!result.event19.visible || result.event19.occupied){
-                        result.event19 = null;
-                    }
-                    if (!result.event20.visible || result.event20.occupied){
-                        result.event20 = null;
-                    }
-
                 }
+               callback(results);
             }
         })
 

@@ -41,14 +41,13 @@ module.exports = {
 
         // check own calendar
         if (currentUserId == calendarUserId){
+            Calendar.searchByOwnerAndWeek(currentUserId, req.param('week'), function(results){
+                return res.json(results);
+            })
 
         }else{ // check service provider calendar
 
         }
-
-        return res.json({
-            todo: 'show Not implemented yet!'
-        });
     },
 
     create: function (req, res) {
