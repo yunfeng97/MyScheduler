@@ -5,7 +5,7 @@
  * @docs        :: http://sailsjs.org/#!documentation/models
  */
 
-var String = require('string');
+//var String = require('string');
 
 module.exports = {
 
