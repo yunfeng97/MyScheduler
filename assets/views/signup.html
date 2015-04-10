@@ -14,7 +14,7 @@
             <label>Your full name</label>
 
             <!-- For this input field make it required, and have a max length of 25 -->
-            <input type="text" class="form-control" placeholder="e.g. Nikola Tesla" name="name" ng-model="signupForm.name" ng-maxlength="50" required>
+            <input type="text" class="form-control" placeholder="e.g. Tom Jerry" name="name" ng-model="signupForm.name" ng-maxlength="50" required>
 
             <!-- Also, if signup.name.$dirty is true, show the message depending upon the particular properties truthiness (e.g. required
             and/or maxlength) -->
@@ -43,7 +43,7 @@
              ng-class="{'has-error':signup.email.$invalid &&
                               signup.email.$dirty}">
             <label>Your email address</label>
-            <input type="email" class="form-control" placeholder="nikola@tesla.com" name="email" ng-model="signupForm.email" required >
+            <input type="email" class="form-control" placeholder="tjerry@gmail.com" name="email" ng-model="signupForm.email" required >
           <span class="help-block has-error" ng-if="signup.email.$dirty">
             <span ng-show="signup.email.$error.required">Email address is required.</span>
             <span ng-show="signup.email.$error.email">Not a valid email address.</span>
@@ -52,7 +52,7 @@
 
         <!-- P A S S W O R D -->
 
-        <div class="control-group form-group col-md-6"
+        <div class="control-group form-group col-md-12"
              ng-class="{'has-error':signup.password.$invalid &&
                               signup.password.$dirty}">
             <label>Choose a password</label>
@@ -66,13 +66,19 @@
 
         <!-- C O N F I R M  P A S S W O R D -->
 
-        <div class="control-group form-group col-md-6">
+        <div class="control-group form-group col-md-12">
             <label>Re-enter your password</label>
-            <input type="password" class="form-control" placeholder="one more time" name="confirmation" ng-model="signupForm.confirmPassword" required>
+            <input type="password" class="form-control" name="has" ng-model="signupForm.confirmPassword" required>
           <span class="help-block has-error" ng-if="signup.confirmation.$dirty">
             <span ng-show="signup.password.$error.compareTo">Password must match.</span>
             <span ng-show="signup.confirmation.$error.required">Confirmation password is required.</span>
           </span>
+        </div>
+
+        <div class="control-group form-group col-md-12 ">
+            <label>
+                <input type="checkbox" name="hasService" ng-model="signupForm.hasService">Create services
+            </label>
         </div>
     </div>
 
