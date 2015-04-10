@@ -33,88 +33,88 @@ module.exports.routes = {
      ***************************************************************************/
 
 
-    '/login': {
+    '/api/login': {
         controller: 'Login/auth',
         action: 'index'
     },
 
-    '/logout': {
+    '/api/logout': {
         controller: 'Login/auth',
         action: 'logout'
     },
 
 
     /*** Routes for User ***/
-    'POST /user': {
+    'POST /api/user': {
         controller: 'Login/SignupController',
         action: 'createNew'
     },
 
     /*** Routes for Dashboard ***/
-    'GET /dashboard/:userId': 'Dashboard/DashboardController',
+    'GET /api/dashboard/:userId': 'Dashboard/DashboardController',
 
 
 
     /*** Routes for Calendar ***/
-    'GET /calendar/:userId': {
+    'GET /api/calendar/:userId': {
         controller: 'Calendar/CalendarController',
         action: 'showCalendar'
     },
-    'POST /calendar/:userId': {
+    'POST /api/calendar/:userId': {
         controller: 'Calendar/CalendarController',
         action: 'create'
     },
-    'PUT /calendar/:userId': {
+    'PUT /api/calendar/:userId': {
         controller: 'Calendar/CalendarController',
         action: 'update'
     },
-    'GET /calendar/template/:userId': {
+    'GET /api/calendar/template/:userId': {
         controller: 'Calendar/CalendarController',
         action: 'showCalendarTemplate'
     },
-    'POST /calendar/template/:userId': {
+    'POST /api/calendar/template/:userId': {
         controller: 'Calendar/CalendarController',
         action: 'createTemplate'
     },
-    'PUT /calendar/template/:userId': {
+    'PUT /api/calendar/template/:userId': {
         controller: 'Calendar/CalendarController',
         action: 'updateTemplate'
     },
-    'DELETE /calendar/template/:userId': {
+    'DELETE /api/calendar/template/:userId': {
         controller: 'Calendar/CalendarController',
         action: 'deleteTemplate'
     },
 
     /*** Routes for Service ***/
-    'POST /service/register' : {
+    'POST /api/service/register' : {
         controller: 'Service/ServiceController',
         action:     'createNew'
     },
-    'PUT /service/:serviceId': {
+    'PUT /api/service/:serviceId': {
         controller: 'Service/ServiceController',
         action:     'update'
     },
-    'GET /service/:serviceId': {
+    'GET /api/service/:serviceId': {
         controller: 'Service/SearchController',
         action:     'searchByServiceName'
     },
-    'GET /service': {
+    'GET /api/service': {
         controller: 'Service/SearchController',
         action:     'searchByMultiConditions'
     },
-    'GET /service/category/:categoryId': {
+    'GET /api/service/category/:categoryId': {
         controller: 'Service/SearchController',
         action:     'searchByCategory'
     },
-    'GET /service/name/:serviceId': {
+    'GET /api/service/name/:serviceId': {
         controller: 'Service/SearchController',
         action:     'searchByServiceName'
     },
-    'GET /service/desc/:description': {
+    'GET /api/service/desc/:description': {
         controller: 'Service/SearchController',
         action:     'searchByDescription'
     },
-    'GET /service/location/:location': {
+    'GET /api/service/location/:location': {
         controller: 'Service/SearchController',
         action:     'searchByLocation'
     }
