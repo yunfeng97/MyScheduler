@@ -5,13 +5,15 @@ angular.module('Myscheduler', ["ngRoute"])
     .config(['$routeProvider',
         function($routeProvider) {
             $routeProvider.
-                when('/phone', {
-                    templateUrl: '../views/homepage.html',
-                    controller: 'MySchedulerController'
-                }).
                 when('/', {
                     templateUrl: '../views/homepage.ejs',
                     controller: 'MySchedulerController'
+                }).when('/phone', {
+                    templateUrl: '../views/homepage.html',
+                    controller: 'MySchedulerController'
+                }).
+                when('/signup', {
+                    templateUrl: '../views/signup.html'
                 }).
                 otherwise({
                     redirectTo: '../views/phones'
