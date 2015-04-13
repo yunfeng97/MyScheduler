@@ -27,6 +27,7 @@ var jsFilesToInject = [
   'js/dependencies/sails.io.js',
 
   'js/dependencies/angular.js',
+  'js/dependencies/jquery.js',
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',
 
@@ -35,7 +36,8 @@ var jsFilesToInject = [
   'js/app.js',
   'js/public/signup/SignupModule.js',
   'js/private/dashboard/DashboardModule.js',
-  'js/public/homepage/HomepageModule.js'
+  'js/public/homepage/HomepageModule.js',
+  'js/controller/*.js'
 ];
 
 
