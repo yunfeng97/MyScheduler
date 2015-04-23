@@ -5,6 +5,12 @@ angular.module('MyScheduler')
     .controller('DashboardCtrl', ['$scope', function ($scope) {
         $scope.test = 'This is test text';
 
+        $scope.appointments = [
+            {service: 'tire change'},
+            {service: 'oil change'},
+            {service: 'body check'}
+        ];
+
         $scope.submitSignupForm = function(){
 
             // Set the loading state (i.e. show loading spinner)
