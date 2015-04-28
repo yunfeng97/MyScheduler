@@ -173,7 +173,7 @@ module.exports = {
             }else{
                 res.json(200, newTemplate);
             }
-        })
+        });
     }
 };
 

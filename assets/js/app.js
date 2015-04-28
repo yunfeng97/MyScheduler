@@ -34,6 +34,10 @@ angular.module('MyScheduler', ['ngRoute'])
                 when('/newService', {
                     templateUrl: '../views/NewService.html'
                 }).
+                when('/viewNewService', {
+                    templateUrl: '../views/viewNewService.html',
+                    controller: 'ViewServiceCtrl'
+                }).
                 otherwise({
                     redirectTo: '../views/phones'
                 });

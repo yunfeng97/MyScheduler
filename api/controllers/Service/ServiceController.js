@@ -18,6 +18,25 @@ module.exports = {
             active: true
         };
 
+    },
+
+    createNew: function(req, res){
+        var name = req.param("name");
+        var description = req.param("description");
+        //process.stdout.write(name)
+        var service = {
+            serviceName: name,
+            serviceDesc: description
+        };
+
+        Services.create(service, function (err, newService) {
+            if (err){
+                res.send(500, err);
+            }else{
+                //process.stdout.write(newService);
+                res.json(200, newService);
+            }
+        })
     }
 };
 
