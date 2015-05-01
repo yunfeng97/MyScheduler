@@ -21,10 +21,9 @@ angular.module('MyScheduler')
                     //console.log(angular.fromJson(data));
                     //console.log("service name is : " + $scope.newService.serviceName)
                     //$scope.$apply(function(){
-                    $scope.newService = angular.fromJson(data);
+                    $scope.newServiceCreated = true;
                     //});
                     //$location.path('/viewNewService');
-                    window.location = '#/viewNewService';
                 }).
                 error(function(data, status, headers, config) {
                     console.log("staus: " + status);

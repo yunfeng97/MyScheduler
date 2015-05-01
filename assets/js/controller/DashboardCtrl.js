@@ -6,9 +6,36 @@ angular.module('MyScheduler')
         $scope.test = 'This is test text';
 
         $scope.appointments = [
-            {service: 'tire change'},
-            {service: 'oil change'},
-            {service: 'body check'}
+            {
+                startTime:      '9:00am',
+                endTime:        '9:30am',
+                customerName:   'Mr. Chen',
+                service:        'tire change'
+            },
+            {
+                startTime:      '10:00am',
+                endTime:        '10:50am',
+                customerName:   'Mr. Chen',
+                service:        'tire change'
+            },
+            {
+                startTime:      '11:00am',
+                endTime:        '1:30am',
+                customerName:   'Mr. Chen',
+                service:        'tire change'
+            },
+            {
+                startTime:      '1:00pm',
+                endTime:        '2:30pm',
+                customerName:   'Mr. Gord',
+                service:        'body check'
+            },
+            {
+                startTime:      '3:00pm',
+                endTime:        '3:30pm',
+                customerName:   'Mr. Chen',
+                service:        'body check'
+            }
         ];
 
         $scope.submitSignupForm = function(){
@@ -41,5 +68,9 @@ angular.module('MyScheduler')
                 .finally(function eitherWay(){
 
                 })
+        };
+
+        $scope.showAppointment = function(appId){
+            $scope.minutes = appId;
         }
     }]);
