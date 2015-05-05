@@ -7,30 +7,35 @@ angular.module('MyScheduler')
 
         $scope.appointments = [
             {
+                id:             111111,
                 startTime:      '9:00am',
                 endTime:        '9:30am',
                 customerName:   'Mr. Chen',
                 service:        'tire change'
             },
             {
+                id:             111112,
                 startTime:      '10:00am',
                 endTime:        '10:50am',
                 customerName:   'Mr. Chen',
                 service:        'tire change'
             },
             {
+                id:             111113,
                 startTime:      '11:00am',
                 endTime:        '1:30am',
                 customerName:   'Mr. Chen',
                 service:        'tire change'
             },
             {
+                id:             111115,
                 startTime:      '1:00pm',
                 endTime:        '2:30pm',
                 customerName:   'Mr. Gord',
                 service:        'body check'
             },
             {
+                id:             111116,
                 startTime:      '3:00pm',
                 endTime:        '3:30pm',
                 customerName:   'Mr. Chen',
@@ -40,6 +45,7 @@ angular.module('MyScheduler')
 
         $scope.submitSignupForm = function(){
 
+            console.log("in submitSignupForm");
             // Set the loading state (i.e. show loading spinner)
             $scope.signupForm.loading = true;
 
@@ -71,6 +77,9 @@ angular.module('MyScheduler')
         };
 
         $scope.showAppointment = function(appId){
-            $scope.minutes = appId;
+            console.log("In showAppointment");
+            $scope.customerName = "Mr. Test";
+            $scope.contactInfo = "226 222 6666";
+            $scope.service = "This is a test service";
         }
     }]);
