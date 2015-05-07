@@ -1,114 +1,110 @@
 <div ng-controller="DashboardCtrl">
 
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Dashboard</h1>
-    </div>
-    <!-- /.col-lg-12 -->
-</div>
     <div class="row">
-        <div class="col-md-4">
-            <h3 class="box-title">Today</h3>
-            <div class="box box-solid">
-                <div class="box-body no-padding" ng-repeat="app in appointments">
-                    <ul class="nav nav-pills nav-stacked">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dashboard</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-bell fa-fw"></i> Today's appointments
+                </div>
+                <div class="panel-body" ng-repeat="app in appointments">
                         <li class="active"><a href="#/dashboard" ng-click="showAppointment(app.id)">{{app.startTime}}-{{app.endTime}}
                             {{app.customerName}} {{app.service}} </a></li>
-                    </ul>
-                </div><!-- /.box-body -->
-            </div><!-- /. box -->
-        </div><!-- /.col -->
-        <div class="col-md-8">
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Detail</h3>
-                </div><!-- /.box-header -->
-                <div class="box-body no-padding">
-                    <div class="table-responsive mailbox-messages">
-                        <table class="table table-hover table-striped">
-                            <tbody>
-                            <tr>
-                                <td class="text">{{userId}}</td>
-                            </tr>
-                            <tr>
-                                <td class="text">{{customerName}}</td>
-                            </tr>
-                            <tr>
-                                <td class="text">{{contactInfo}}</td>
-                            </tr>
-                            <tr>
-                                <td class="text">{{service}}</td>
-                            </tr>
-                            </tbody>
-                        </table><!-- /.table -->
-                    </div><!-- /.mail-box-messages -->
-                </div><!-- /.box-body -->
-            </div><!-- /. box -->
-        </div><!-- /.col -->
-    </div><!-- /.row -->
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /. box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-7">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-bell fa-fw"></i> Details
+                </div>
+                <div class="panel-body">
+                    <div class="list-group"><!--
+                        <li class="list-group-item">{{userId}}</li>
+                        <li class="list-group-item">{{customerName}}</li>
+                        <li class="list-group-item">{{contactInfo}}</li>
+                        <li class="list-group-item">{{service}}</li>
+                        -->
+                        {{userId}}<br/>
+                        {{customerName}}
+                    </div>
+                    <!-- /.table -->
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /. box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
 
     <div class="row">
-    <div class="col-lg-4">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <i class="fa fa-bell fa-fw"></i> Notifications Panel
-            </div>
-            <!-- /.panel-heading -->
-            <div class="panel-body">
-                <div class="list-group">
-                    <a href="#" class="list-group-item">
-                        <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small"><em>4 minutes ago</em>
-                                    </span>
-                    </a>
-                    <a href="#" class="list-group-item">
-                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-bell fa-fw"></i> Notifications Panel
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="list-group">
+
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
                                     <span class="pull-right text-muted small"><em>12 minutes ago</em>
                                     </span>
-                    </a>
-                    <a href="#" class="list-group-item">
-                        <i class="fa fa-envelope fa-fw"></i> Message Sent
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-envelope fa-fw"></i> Message Sent
                                     <span class="pull-right text-muted small"><em>27 minutes ago</em>
                                     </span>
-                    </a>
-                    <a href="#" class="list-group-item">
-                        <i class="fa fa-tasks fa-fw"></i> New Task
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-tasks fa-fw"></i> New Task
                                     <span class="pull-right text-muted small"><em>43 minutes ago</em>
                                     </span>
-                    </a>
-                    <a href="#" class="list-group-item">
-                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
                                     <span class="pull-right text-muted small"><em>11:32 AM</em>
                                     </span>
-                    </a>
-                    <a href="#" class="list-group-item">
-                        <i class="fa fa-bolt fa-fw"></i> Server Crashed!
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-bolt fa-fw"></i> Server Crashed!
                                     <span class="pull-right text-muted small"><em>11:13 AM</em>
                                     </span>
-                    </a>
-                    <a href="#" class="list-group-item">
-                        <i class="fa fa-warning fa-fw"></i> Server Not Responding
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-warning fa-fw"></i> Server Not Responding
                                     <span class="pull-right text-muted small"><em>10:57 AM</em>
                                     </span>
-                    </a>
-                    <a href="#" class="list-group-item">
-                        <i class="fa fa-shopping-cart fa-fw"></i> New Order Placed
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-shopping-cart fa-fw"></i> New Order Placed
                                     <span class="pull-right text-muted small"><em>9:49 AM</em>
                                     </span>
-                    </a>
-                    <a href="#" class="list-group-item">
-                        <i class="fa fa-money fa-fw"></i> Payment Received
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-money fa-fw"></i> Payment Received
                                     <span class="pull-right text-muted small"><em>Yesterday</em>
                                     </span>
-                    </a>
+                        </a>
+                    </div>
+                    <!-- /.list-group -->
+                    <a href="#" class="btn btn-default btn-block">View All Alerts</a>
                 </div>
-                <!-- /.list-group -->
-                <a href="#" class="btn btn-default btn-block">View All Alerts</a>
+                <!-- /.panel-body -->
             </div>
-            <!-- /.panel-body -->
+
+
         </div>
-
-
     </div>
-    </div><!-- /.row -->
+    <!-- /.row -->
 </div>
