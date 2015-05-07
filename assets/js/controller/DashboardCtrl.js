@@ -78,6 +78,7 @@ angular.module('MyScheduler')
 
         $scope.showAppointment = function(appId){
             console.log("In showAppointment");
+            $scope.userId = appId;
             $scope.customerName = "Mr. Test";
             $scope.contactInfo = "226 222 6666";
             $scope.service = "This is a test service";
