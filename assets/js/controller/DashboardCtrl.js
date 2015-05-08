@@ -82,5 +82,12 @@ angular.module('MyScheduler')
             $scope.customerName = "Mr. Test";
             $scope.contactInfo = "226 222 6666";
             $scope.service = "This is a test service";
-        }
+        };
+
+        $scope.appNotifications = [
+            {description: 'Kevin cancelled appointment for body repair', updatedTime: '10 mins ago'},
+            {description: 'Stephen scheduled appointment for oil change on May 18, 2015', updatedTime: '30 mins ago'},
+            {description: 'Linlin re-scheduled appointment for regular maitenance from May 10 to May 22, 2015', updatedTime: '1 hour ago'},
+            {description: 'Yunfeng updated appointment adding oil change', updatedTime: '3 hours ago'}
+        ]
     }]);
