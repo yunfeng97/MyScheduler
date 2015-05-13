@@ -89,5 +89,9 @@ angular.module('MyScheduler')
             {description: 'Stephen scheduled appointment for oil change on May 18, 2015', updatedTime: '30 mins ago'},
             {description: 'Linlin re-scheduled appointment for regular maitenance from May 10 to May 22, 2015', updatedTime: '1 hour ago'},
             {description: 'Yunfeng updated appointment adding oil change', updatedTime: '3 hours ago'}
-        ]
+        ];
+
+        $scope.showNotification = function () {
+            $scope.detail = 'the notification details';
+        }
     }]);
