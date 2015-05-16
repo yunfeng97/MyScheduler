@@ -56,12 +56,13 @@
                 <div class="panel-body">
                     <div class="list-group" ng-repeat=" item in appNotifications">
                         <a href="" ng-click="showNotification()" data-toggle="modal" class="list-group-item btn btn-lg btn-success"
-                           data-toggle="modal" data-target="#myModal2">
+                           data-toggle="modal" data-target="#notificationPopup">
                             <i class="fa fa-twitter fa-fw"></i> {{item.description}}
                                     <span class="pull-right text-muted small"><em>{{item.updatedTime}}</em>
                                     </span>
                         </a>
                     </div>
+
                     <!-- /.list-group -->
                     <!--<a href="#" class="btn btn-default btn-block">View All Alerts</a>-->
                 </div>
@@ -72,15 +73,18 @@
         </div>
     </div>
     <!-- /.row -->
-    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="notificationPopup" tabindex="-1" role="dialog" aria-labelledby="notiDetails" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Modal title</h4>
+                    <h4 class="modal-title" id="notiDetails">Notification Detail</h4>
                 </div>
                 <div class="modal-body">
-                    <p>{{detail}}</p>
+                    <p>Mr. Chen made appointment for auto</p>
+                    <p>Services include:</p>
+                    <li>Oil change</li>
+                    <li>Brake check</li>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary btn-default" data-dismiss="modal">Close</button>
@@ -91,6 +95,8 @@
 </div>
 
 
+
+<!-- below NOT used -->
 <!-- Button trigger modal -->
 <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
     <div class="modal-dialog">
