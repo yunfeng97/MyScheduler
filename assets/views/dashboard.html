@@ -85,8 +85,15 @@
                     <p>Services include:</p>
                     <li>Oil change</li>
                     <li>Brake check</li>
+                    <br/>
+
+                    <p ng-show="messageToShow != null">{{messageToShow}}</p>
+
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-default" ng-disabled="addCustomerDisabled" ng-click="addCustomer()">Add Customer</button>
+                    <button type="button" class="btn btn-primary btn-default" ng-click="confirmAppointment()">Confirm</button>
+                    <button type="button" class="btn btn-primary btn-default" ng-click="reschedule()">Reschedule</button>
                     <button type="button" class="btn btn-primary btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div><!-- /.modal-content -->

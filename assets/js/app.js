@@ -38,6 +38,10 @@ angular.module('MyScheduler', ['ngRoute'])
                     templateUrl: '../views/viewNewService.html',
                     controller: 'ViewServiceCtrl'
                 }).
+                when('/newAppointment', {
+                    templateUrl: '../views/NewAppointment.html',
+                    controller: 'NewAppointmentCtrl'
+                }).
                 otherwise({
                     redirectTo: '../views/phones'
                 });

@@ -118,7 +118,15 @@ module.exports.routes = {
         controller: 'Service/SearchController',
         action:     'searchByLocation'
     }
-    
+
+    /** Routers for appointments **/
+        /*
+    'GET /api/appointment/new': {
+        controller: 'Appointment/NewController',
+        action:     'makeNew'
+    }
+    */
+
     /** Routes below are not used any more **/
 
     /*** Routes for Customer Calendar ***/

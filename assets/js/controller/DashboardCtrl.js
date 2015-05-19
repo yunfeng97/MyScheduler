@@ -84,6 +84,19 @@ angular.module('MyScheduler')
             $scope.service = "This is a test service";
         };
 
+        $scope.addCustomer = function(){
+            $scope.addCustomerDisabled = true;
+            $scope.messageToShow = "The new customer has been successfully addded to your cusotmer list."
+        };
+
+        $scope.confirmAppointment = function(){
+            $scope.messageToShow = "The confirmation has been sent to customer."
+        };
+
+        $scope.reschedule = function(){
+            $scope.messageToShow = "Reschedule has been sent to customer. Please wait for response."
+        };
+
         $scope.appNotifications = [
             {description: 'Kevin cancelled appointment for body repair', updatedTime: '10 mins ago'},
             {description: 'Stephen scheduled appointment for oil change on May 18, 2015', updatedTime: '30 mins ago'},
@@ -93,5 +106,7 @@ angular.module('MyScheduler')
 
         $scope.showNotification = function () {
             $scope.detail = 'the notification details';
+            $scope.addCustomerDisabled = false;
+            $scope.messageToShow = null;
         }
     }]);
