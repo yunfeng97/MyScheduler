@@ -90,10 +90,12 @@ angular.module('MyScheduler')
         };
 
         $scope.confirmAppointment = function(){
+            $scope.confirmAppointmentDisabled = true;
             $scope.messageToShow = "The confirmation has been sent to customer."
         };
 
         $scope.reschedule = function(){
+            $scope.rescheduleDisabled = true;
             $scope.messageToShow = "Reschedule has been sent to customer. Please wait for response."
         };
 
