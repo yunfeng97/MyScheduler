@@ -51,9 +51,12 @@ module.exports.routes = {
     },
 
     /*** Routes for Dashboard ***/
+        'GET /api/dashboard/all': {
+        controller: 'Dashboard/DashboardController',
+        action: 'all'
+    },
+
     'GET /api/dashboard/:userId': 'Dashboard/DashboardController',
-
-
 
     /*** Routes for Calendar ***/
     'GET /api/calendar/:userId': {
