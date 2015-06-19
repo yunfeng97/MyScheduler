@@ -15,7 +15,7 @@ module.exports = {
     all: function(req, res){
         return res.json([
             {
-                eventDate:  "2015-06-06",
+                eventDate:  "2015-06-09",
                 customer:   "Mr. Chen",
                 details:    "Cancelled appointment on June 12, 2015"
             },
