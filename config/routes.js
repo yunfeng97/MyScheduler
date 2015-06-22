@@ -51,9 +51,9 @@ module.exports.routes = {
     },
 
     /*** Routes for Dashboard ***/
-        'GET /api/dashboard/all': {
+        'GET /api/dashboard/todayApps': {
         controller: 'Dashboard/DashboardController',
-        action: 'all'
+        action: 'todayApps'
     },
 
     'GET /api/dashboard/:userId': 'Dashboard/DashboardController',
