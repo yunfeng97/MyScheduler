@@ -51,9 +51,14 @@ module.exports.routes = {
     },
 
     /*** Routes for Dashboard ***/
-        'GET /api/dashboard/todayApps': {
+    'GET /api/dashboard/todayApps': {
         controller: 'Dashboard/DashboardController',
         action: 'todayApps'
+    },
+
+    'GET /api/dashboard/app/:appId': {
+        controller: 'Dashboard/DashboardController',
+        action: 'getAppDetails'
     },
 
     'GET /api/dashboard/:userId': 'Dashboard/DashboardController',
@@ -89,61 +94,61 @@ module.exports.routes = {
     },
 
     /*** Routes for Service ***/
-    'POST /api/service/register' : {
+    'POST /api/service/register': {
         controller: 'Service/ServiceController',
-        action:     'createNew'
+        action: 'createNew'
     },
     'PUT /api/service/:serviceId': {
         controller: 'Service/ServiceController',
-        action:     'update'
+        action: 'update'
     },
     'GET /api/service/:serviceId': {
         controller: 'Service/SearchController',
-        action:     'searchByServiceName'
+        action: 'searchByServiceName'
     },
     'GET /api/service': {
         controller: 'Service/SearchController',
-        action:     'searchByMultiConditions'
+        action: 'searchByMultiConditions'
     },
     'GET /api/service/category/:categoryId': {
         controller: 'Service/SearchController',
-        action:     'searchByCategory'
+        action: 'searchByCategory'
     },
     'GET /api/service/name/:serviceId': {
         controller: 'Service/SearchController',
-        action:     'searchByServiceName'
+        action: 'searchByServiceName'
     },
     'GET /api/service/desc/:description': {
         controller: 'Service/SearchController',
-        action:     'searchByDescription'
+        action: 'searchByDescription'
     },
     'GET /api/service/location/:location': {
         controller: 'Service/SearchController',
-        action:     'searchByLocation'
+        action: 'searchByLocation'
     }
 
     /** Routers for appointments **/
-        /*
-    'GET /api/appointment/new': {
-        controller: 'Appointment/NewController',
-        action:     'makeNew'
-    }
-    */
+    /*
+     'GET /api/appointment/new': {
+     controller: 'Appointment/NewController',
+     action:     'makeNew'
+     }
+     */
 
     /** Routes below are not used any more **/
 
     /*** Routes for Customer Calendar ***/
     /*
-    'GET /:userId/calendar': {
-        controller: 'Calendar/CustomerCalendarController',
-        action: 'showCustomerCalendar'
-    },
+     'GET /:userId/calendar': {
+     controller: 'Calendar/CustomerCalendarController',
+     action: 'showCustomerCalendar'
+     },
 
-    'DELETE /calendar/:userId': {
-        controller: 'Calendar/CustomerCalendarController',
-        action: 'delete'
-    }
-    */
+     'DELETE /calendar/:userId': {
+     controller: 'Calendar/CustomerCalendarController',
+     action: 'delete'
+     }
+     */
 
     /*
      'get /signup': { view: 'conversion/signup' },
