@@ -61,6 +61,11 @@ module.exports.routes = {
         action: 'getAppDetails'
     },
 
+    'PUT /api/dashboard/app/accept/:appId': {
+        controller: 'Dashboard/DashboardController',
+        action: 'acceptAppByBusiness'
+    },
+
     'GET /api/dashboard/:userId': 'Dashboard/DashboardController',
 
     /*** Routes for Calendar ***/

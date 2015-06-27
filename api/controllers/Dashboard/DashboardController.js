@@ -49,6 +49,35 @@ module.exports = {
         });
     },
 
+    acceptAppByBusiness: function(req, res){
+        var appId = req.param('appid');
+        console.log("in accept");
+        //var app = Appointments.findOne(appId, function(err, result){
+        //    if (err){
+        //        res.send(500, err);
+        //    }else{
+        //        res.json(result);
+        //    }
+        //})
+
+        // check the businessId of the appointment is the userId of current user
+        //var currentUserId = req.session('userId');
+        //if (currentUserId != app.businessId){
+        if (1 != 0){
+            res.send('You do not have the permission to update the appointment');
+        }
+    },
+
+    acceptAppByCustomer: function(req, res){
+        var appId = req.param('appid');
+
+        // check the customerId of the appointment is the userId of current user
+        var currentUserId = req.session('userId');
+        if (currentUserId != ''){
+
+        }
+    },
+
     // search for today's appointments
     today: function (req, res) {
         var currentUserId = req.session('userId');
