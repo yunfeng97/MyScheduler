@@ -10,7 +10,7 @@
  */
 
 module.exports.models = {
-  connection: 'mongodb'
+  connection: 'mongodb',
 
   /***************************************************************************
   *                                                                          *
@@ -29,5 +29,6 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
   // migrate: 'alter'
+  migrate: 'alter'
 
 };

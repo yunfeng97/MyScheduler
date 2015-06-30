@@ -56,6 +56,11 @@ module.exports.routes = {
         action: 'todayApps'
     },
 
+    'GET /api/dashboard/newApps': {
+        controller: 'Dashboard/DashboardController',
+        action: 'newApps'
+    },
+
     'GET /api/dashboard/app/:appId': {
         controller: 'Dashboard/DashboardController',
         action: 'getAppDetails'
@@ -99,6 +104,7 @@ module.exports.routes = {
     },
 
     /*** Routes for Service ***/
+    /*
     'POST /api/service/register': {
         controller: 'Service/ServiceController',
         action: 'createNew'
@@ -131,6 +137,7 @@ module.exports.routes = {
         controller: 'Service/SearchController',
         action: 'searchByLocation'
     }
+    */
 
     /** Routers for appointments **/
     /*

@@ -78,6 +78,31 @@ module.exports = {
         }
     },
 
+    newApps: function (req, res) {
+        console.log("request received in newApps");
+        return res.json([
+            {
+                id: 1,
+                eventDate: "2015-06-19",
+                customer: "Mr. Chen",
+                details: "Cancelled appointment on June 19, 2015"
+            },
+            {
+                id: 2,
+                eventDate: "2015-06-22",
+                customer: "Miss Zhou",
+                details: "Make new appointment on June 22 2015 for body check"
+            },
+            {
+                id: 3,
+                eventDate: "2015-07-02",
+                customer: "Mr. Stephen",
+                details: "Change the appointment to July 26 2015 for body check"
+            }
+
+        ]);
+    },
+
     // search for today's appointments
     today: function (req, res) {
         var currentUserId = req.session('userId');
