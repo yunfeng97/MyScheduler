@@ -103,6 +103,55 @@ module.exports = {
         ]);
     },
 
+    cancelledApps: function (req, res) {
+        console.log("request received in cancelledApps");
+        return res.json([
+            {
+                id: 1,
+                eventDate: "2015-07-29",
+                customer: "Mr. Stephen",
+                details: "cancelled appointment onJune 20, 2015"
+            },
+            {
+                id: 2,
+                eventDate: "2015-06-22",
+                customer: "Miss Kevin",
+                details: "cancelled appointment on June 22 2015 for body check"
+            },
+            {
+                id: 3,
+                eventDate: "2015-07-02",
+                customer: "Mr. Chen",
+                details: "cancelled the appointment on July 26 2015 for body check"
+            }
+        ]);
+    },
+
+    rescheduledApps: function (req, res) {
+        console.log("request received in rescheduledApps");
+        return res.json([
+            {
+                id: 1,
+                eventDate: "2015-06-29",
+                customer: "Mr. Stephen",
+                details: "rescheduled appointment from June 19, 2015 to June 20, 2015"
+            },
+            {
+                id: 2,
+                eventDate: "2015-07-22",
+                customer: "Miss Kevin",
+                details: "rescheduled from June 22 2015 to July 1, 2015 for body check"
+            },
+            {
+                id: 3,
+                eventDate: "2015-07-02",
+                customer: "Mr. Chen",
+                details: "rescheduled the appointment July 26 2015 to Auguest 1, 2015 for body check"
+            }
+
+        ]);
+    },
+
     // search for today's appointments
     today: function (req, res) {
         var currentUserId = req.session('userId');

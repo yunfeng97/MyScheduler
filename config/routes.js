@@ -61,6 +61,16 @@ module.exports.routes = {
         action: 'newApps'
     },
 
+    'GET /api/dashboard/cancelledApps': {
+        controller: 'Dashboard/DashboardController',
+        action: 'cancelledApps'
+    },
+
+    'GET /api/dashboard/rescheduledApps': {
+        controller: 'Dashboard/DashboardController',
+        action: 'rescheduledApps'
+    },
+
     'GET /api/dashboard/app/:appId': {
         controller: 'Dashboard/DashboardController',
         action: 'getAppDetails'
@@ -72,6 +82,8 @@ module.exports.routes = {
     },
 
     'GET /api/dashboard/:userId': 'Dashboard/DashboardController',
+    /****** End ******/
+
 
     /*** Routes for Calendar ***/
     'GET /api/calendar/:userId': {
