@@ -85,6 +85,11 @@ module.exports.routes = {
     /****** End ******/
 
 
+    /*** Routes for Clients ***/
+    'GET /api/clients/allClients': 'getAllClients',
+    /****** End ******/
+
+
     /*** Routes for Calendar ***/
     'GET /api/calendar/:userId': {
         controller: 'Calendar/CalendarController',
