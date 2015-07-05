@@ -86,7 +86,10 @@ module.exports.routes = {
 
 
     /*** Routes for Clients ***/
-    'GET /api/clients/allClients': 'getAllClients',
+    'GET /api/clients/allClients': {
+        controller: 'Clients/ClientsController',
+        action: 'getAllClients'
+    },
     /****** End ******/
 
 
