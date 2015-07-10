@@ -90,6 +90,11 @@ module.exports.routes = {
         controller: 'Clients/ClientsController',
         action: 'getAllClients'
     },
+    'GET /api/clients/client/:clientId': {
+        controller: 'Clients/ClientsController',
+        action: 'getClient'
+    },
+
     /****** End ******/
 
 

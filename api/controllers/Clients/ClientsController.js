@@ -32,5 +32,17 @@ module.exports = {
                 name: 'Stephen Chen'
             }
         ]);
+    },
+
+    getClient: function(req, res){
+        var clientId = req.param('clientId');
+        console.log("get detail for client: " + clientId);
+
+        return res.json({
+            id: 111,
+            name: 'Stephen Chen',
+            phone: '519-666-6666',
+            email: 'stephen.chen@mycorp.com'
+        });
     }
 };
