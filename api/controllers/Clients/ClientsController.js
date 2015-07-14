@@ -36,13 +36,29 @@ module.exports = {
 
     getClient: function(req, res){
         var clientId = req.param('clientId');
-        console.log("get detail for client: " + clientId);
+        //console.log("get detail for client: " + clientId);
 
-        return res.json({
-            id: 111,
-            name: 'Stephen Chen',
-            phone: '519-666-6666',
-            email: 'stephen.chen@mycorp.com'
-        });
+        if (clientId == 1) {
+            return res.json({
+                id: 111,
+                name: 'Angela Ling',
+                phone: '519-666-6666',
+                email: 'angela.chen@mycorp.com'
+            });
+        }else if (clientId == 5){
+            return res.json({
+                id: 555,
+                name: 'Lucy Chen',
+                phone: '519-666-6666',
+                email: 'lucy.chen@mycorp.com'
+            });
+        }else if (clientId == 6){
+            return res.json({
+                id: 666,
+                name: 'Stephen Chen',
+                phone: '519-666-6666',
+                email: 'stephen.chen@mycorp.com'
+            });
+        }
     }
 };
