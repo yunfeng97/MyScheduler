@@ -111,6 +111,7 @@ module.exports.routes = {
         controller: 'Calendar/CalendarController',
         action: 'update'
     },
+    /*,
     'GET /api/calendar/template/:userId': {
         controller: 'Calendar/CalendarController',
         action: 'showCalendarTemplate'
@@ -127,16 +128,20 @@ module.exports.routes = {
         controller: 'Calendar/CalendarController',
         action: 'deleteTemplate'
     },
+    */
 
     /*** Routes for Service ***/
-    /*
+    'GET /api/service//allServicesByUser/:userId': {
+        controller: 'Service/SearchController',
+        action: 'searchByUser'
+    },
     'POST /api/service/register': {
         controller: 'Service/ServiceController',
-        action: 'createNew'
+        action: 'createNewService'
     },
     'PUT /api/service/:serviceId': {
         controller: 'Service/ServiceController',
-        action: 'update'
+        action: 'updateService'
     },
     'GET /api/service/:serviceId': {
         controller: 'Service/SearchController',
@@ -148,11 +153,7 @@ module.exports.routes = {
     },
     'GET /api/service/category/:categoryId': {
         controller: 'Service/SearchController',
-        action: 'searchByCategory'
-    },
-    'GET /api/service/name/:serviceId': {
-        controller: 'Service/SearchController',
-        action: 'searchByServiceName'
+        action: 'searchByCategoryAndLocation'
     },
     'GET /api/service/desc/:description': {
         controller: 'Service/SearchController',
@@ -160,9 +161,9 @@ module.exports.routes = {
     },
     'GET /api/service/location/:location': {
         controller: 'Service/SearchController',
-        action: 'searchByLocation'
+        action: 'searchByNameAndLocation'
     }
-    */
+
 
     /** Routers for appointments **/
     /*

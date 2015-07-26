@@ -6,6 +6,47 @@
  */
 
 module.exports = {
-	
+    searchByUser: function(req, res){
+        console.log("received request in Search Services by User");
+        var userId = req.param('userId');
+        return res.json([
+            {
+                id: 1,
+                name: 'body shop'
+            },
+            {
+                id: 2,
+                name: 'hair cut'
+            }
+        ])
+    },
+
+    createNewService: function(req, res){
+
+    },
+
+    updateService: function(req, res){
+        var serviceId = req.param('serviceId');
+    },
+
+    searchByServiceName: function(req, res){
+
+    },
+
+    searchByMultiConditions: function(req, res){
+
+    },
+
+    searchByCategoryAndLocation: function(req, res){
+
+    },
+
+    searchByNameAndLocation: function(req, res){
+
+    },
+
+    searchByDescription: function(req, res){
+
+    }
 };
 
