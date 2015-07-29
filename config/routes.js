@@ -131,7 +131,7 @@ module.exports.routes = {
     */
 
     /*** Routes for Service ***/
-    'GET /api/service//allServicesByUser/:userId': {
+    'GET /api/service/allServicesByUser/:userId': {
         controller: 'Service/SearchController',
         action: 'searchByUser'
     },
