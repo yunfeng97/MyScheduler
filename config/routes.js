@@ -131,35 +131,39 @@ module.exports.routes = {
     */
 
     /*** Routes for Service ***/
-    'GET /api/service/allServicesByUser/:userId': {
+    'GET /api/services/allServicesByUser/:userId': {
         controller: 'Service/SearchController',
         action: 'searchByUser'
     },
-    'POST /api/service/register': {
+    'POST /api/services/registerNew': {
         controller: 'Service/ServiceController',
-        action: 'createNewService'
+        action: 'registerNewService'
     },
-    'PUT /api/service/:serviceId': {
+    'POST /api/services/saveNew': {
+        controller: 'Service/ServiceController',
+        action: 'saveNewService'
+    },
+    'PUT /api/services/:serviceId': {
         controller: 'Service/ServiceController',
         action: 'updateService'
     },
-    'GET /api/service/:serviceId': {
+    'GET /api/services/:serviceId': {
         controller: 'Service/SearchController',
         action: 'searchByServiceName'
     },
-    'GET /api/service': {
+    'GET /api/services': {
         controller: 'Service/SearchController',
         action: 'searchByMultiConditions'
     },
-    'GET /api/service/category/:categoryId': {
+    'GET /api/services/category/:categoryId': {
         controller: 'Service/SearchController',
         action: 'searchByCategoryAndLocation'
     },
-    'GET /api/service/desc/:description': {
+    'GET /api/services/desc/:description': {
         controller: 'Service/SearchController',
         action: 'searchByDescription'
     },
-    'GET /api/service/location/:location': {
+    'GET /api/services/location/:location': {
         controller: 'Service/SearchController',
         action: 'searchByNameAndLocation'
     }

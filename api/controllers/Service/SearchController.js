@@ -17,6 +17,10 @@ module.exports = {
             {
                 id: 2,
                 name: 'hair cut'
+            },
+            {
+                id: 3,
+                name: 'piano'
             }
         ])
     },

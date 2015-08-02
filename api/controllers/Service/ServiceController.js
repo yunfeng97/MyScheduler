@@ -37,6 +37,22 @@ module.exports = {
                 res.json(200, newService);
             }
         })
+    },
+
+    registerNewService: function(req, res){
+        var qs = require('querystring');
+        var body = '';
+        req.on('data', function (data) {
+            body += data;
+
+            // Too much POST data, kill the connection!
+            console.log("register new service data: " + data);
+        });
+        req.on('end', function () {
+            var post = qs.parse(body);
+            console.log("all service data: " + post.name);
+            // use post['blah'], etc.
+        });
     }
 };
 
