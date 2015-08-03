@@ -8,12 +8,34 @@
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
 
+/*
+ ownerId:  'string',
+ name:     'string',
+ //password:     'string',
+ email: 'email',
+ phone: 'string'
+ */
 module.exports = {
-    getAllClients: function (req, res) {
+    getAllClientsByOwner: function (req, res) {
+        var ownerId = req.session.user;//.id;
+        if (ownerId == null){
+            //console.log("User is not in session");
+            ownerId = '1111';
+        };
+
+        Clients.findByOwnerId(ownerId, {sort: "name asc"}, function(err, results){
+            if (err){
+                res.send(500, err);
+            }else{
+                return res.json(results);
+            }
+        });
+
+        /*
         return res.json([
             {
                 id: 1,
-                name: 'Angela Ling'
+                name: 'Angela Chen'
             },
             {
                 id: 2,
@@ -32,9 +54,10 @@ module.exports = {
                 name: 'Stephen Chen'
             }
         ]);
+        */
     },
 
-    getClient: function(req, res){
+    getClientById: function(req, res){
         var clientId = req.param('clientId');
         //console.log("get detail for client: " + clientId);
 
@@ -67,7 +90,8 @@ module.exports = {
         console.log("new client request: " + req.param('name'));
         console.log("new client request: " + req.param('email'));
 
-        var userId = req.session('userId');
+        var userId = req.session.user; //.id; //req.param('userId');
+
         var newClient = {
             ownerId: '1111',
             name:  req.param('name'),
@@ -75,7 +99,7 @@ module.exports = {
             phone: req.param('phone')
         };
 
-        /*
+
         Clients.create(newClient, function (err, result){
             if (err){
                 res.send(500, err);
@@ -83,9 +107,6 @@ module.exports = {
                 res.json(200, result);
             }
         });
-        */
-
-        Clients.create(newClient);
 
     }
 };

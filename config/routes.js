@@ -88,11 +88,11 @@ module.exports.routes = {
     /*** Routes for Clients ***/
     'GET /api/clients/allClients': {
         controller: 'Clients/ClientsController',
-        action: 'getAllClients'
+        action: 'getAllClientsByOwner'
     },
     'GET /api/clients/client/:clientId': {
         controller: 'Clients/ClientsController',
-        action: 'getClient'
+        action: 'getClientById'
     },
     'POST /api/clients/newClient': {
         controller: 'Clients/ClientsController',
