@@ -60,5 +60,32 @@ module.exports = {
                 email: 'stephen.chen@mycorp.com'
             });
         }
+    },
+
+    createNewClient: function(req, res){
+        //console.log("request url: " + req.url);
+        console.log("new client request: " + req.param('name'));
+        console.log("new client request: " + req.param('email'));
+
+        var userId = req.session('userId');
+        var newClient = {
+            ownerId: '1111',
+            name:  req.param('name'),
+            email: req.param('email'),
+            phone: req.param('phone')
+        };
+
+        /*
+        Clients.create(newClient, function (err, result){
+            if (err){
+                res.send(500, err);
+            }else{
+                res.json(200, result);
+            }
+        });
+        */
+
+        Clients.create(newClient);
+
     }
 };

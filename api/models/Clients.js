@@ -8,21 +8,18 @@
 module.exports = {
 
   attributes: {
+      /*
     uuid:       {
       type:       'string',
       primaryKey: true,
       required:   true
     },
-    serviceProviderId:  'string',
-    userName:     {
-      type:       'string',
-      unique:     true
-    },
-    password:     'string',
-    email:        {
-      type:       'email',
-      unique:     true
-    }
+    */
+    ownerId:  'string',
+    name:     'string',
+    //password:     'string',
+    email: 'email',
+    phone: 'string'
   }
 };
 

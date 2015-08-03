@@ -94,6 +94,10 @@ module.exports.routes = {
         controller: 'Clients/ClientsController',
         action: 'getClient'
     },
+    'POST /api/clients/newClient': {
+        controller: 'Clients/ClientsController',
+        action: 'createNewClient'
+    },
 
     /****** End ******/
 
