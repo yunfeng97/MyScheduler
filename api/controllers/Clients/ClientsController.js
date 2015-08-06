@@ -59,8 +59,18 @@ module.exports = {
 
     getClientById: function(req, res){
         var clientId = req.param('clientId');
-        //console.log("get detail for client: " + clientId);
+        console.log("detail for client: " + clientId);
 
+        Clients.findOne({id : clientId}, function(err, result){
+            if (err){
+                console.log("has error");
+                res.send(500, err);
+            }else{
+                console.log('find one: ' + result.name);
+                return res.json(result);
+            }
+        });
+        /*
         if (clientId == 1) {
             return res.json({
                 id: 111,
@@ -83,6 +93,7 @@ module.exports = {
                 email: 'stephen.chen@mycorp.com'
             });
         }
+        */
     },
 
     createNewClient: function(req, res){
